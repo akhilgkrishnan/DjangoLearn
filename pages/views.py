@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html",) #Add new templates to the web page
+    return render(request, "index.html",) #return the contents of index.html
