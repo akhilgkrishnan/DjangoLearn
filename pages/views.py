@@ -8,4 +8,4 @@ def index(request):
     dest.id = 5
     dest.name = 'Akhil'
     dest.price = 500
-    return render(request, "index.html",{'dest':dest}) #return the contents of index.html
+    return render(request, "index.html",{'dest':dest}) #return dynamic contents to index.html
