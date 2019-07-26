@@ -10,33 +10,39 @@
     
 </head>
 <body>
-    <h1>User Registration</h1><br>
-    <div>
-        <form method="POST" action="register">
-            {% csrf_token %}
-            <div class="form-group">
-            <input type="text" name="first_name" placeholder="First_Name" class="form-control">
+    <div class="pull-right">
+    <div class="form-horizontal">
+        <div class="row">
+        <div class="col-md-6">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align:center">User Registration</h1><br>
+            <form method="POST" action="register">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="first_name" placeholder="First_Name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="last_name" placeholder="Last_Name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                <input type="email" name="email" placeholder="Email" class="form-control">
+            </div>
+                <div class="form-group">
+                <input type="password" name="password1" placeholder="Password" class="form-control">
+            </div>
+                <div class="form-group">
+                <input type="password"name="password2" placeholder="Confirm Password" class="form-control">
+            </div>
+                <div class="form-group">
+                <input type="submit" class="form-control" style="background-color: #2adb33; color:bisque">
+            </div>
+            </form>
         </div>
-            <div class="form-group">
-            <input type="text" name="last_name" placeholder="Last_Name" class="form-control">
-        </div>
-            <div class="form-group">
-            <input type="text" name="username" placeholder="Username" class="form-control">
-        </div>
-            <div class="form-group">
-            <input type="email" name="email" placeholder="Email" class="form-control">
-        </div>
-            <div class="form-group">
-            <input type="password" name="password1" placeholder="Password" class="form-control">
-        </div>
-            <div class="form-group">
-            <input type="password"name="password2" placeholder="Confirm Password" class="form-control">
-        </div>
-            <div class="form-group">
-            <input type="submit">
-        </div>
-        </form>
     </div>
+    </div>
+</div>
     {% for message in messages%}
     <h1>{{message}}</h1>
     {% endfor %}
